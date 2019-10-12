@@ -1,8 +1,8 @@
-# Modules and functions
+# Modules et fonctions
 
-In this chapter we will talk about modules and functions. A function is a block of code that is used to perform a single action. A module is a Python file containing variables, functions and many more things.
+Dans ce chapitre nous allons parler des modules et fonctions. Une fonction est un bloc de code qui est utilisé pour accomplir une action. Un module est un fichier Python contenant des variables, des fonctions et bien d'autres choses encore.
 
-Start up your Python REPL and let’s use the "math" module which provides access to mathematical functions:
+Lancez votre REPL Python. Utilisons le module "math" qui donne accès aux fonctions mathématiques:
 
 ```Python
 >>> import math
@@ -12,7 +12,7 @@ Start up your Python REPL and let’s use the "math" module which provides acces
 4.799655442984406
 ```
 
-Functions are sequences of instructions that are executed when the function is invoked. The following defines the "do\_hello" function that prints two messages when invoked:
+Les fonctions sont des suites d'instructions qui sont exécutées lorsque la fonction est invoquée. Ce qui suit définit la fonction "do\_hello" qui imprime deux messages lorsqu'elle est invoquée:
 
 ```Python
 >>> def do_hello():
@@ -24,9 +24,9 @@ Hello
 World
 ```
 
-Make sure that you insert a tab before both print expressions in the previous function. Tabs and spaces in Python are relevant and define that a block of code is somewhat dependent on a previous instruction. For instance, the print expressions are "inside" the "do\_hello" function therefore must have a tab.
+Assurez-vous de bien insérer un tab avant chacune des deux expression dans la fonction précédente. Les tabs et les espaces ont une signification en Python et définissent qu'un bloc de code est d'une certaine manière dépendant de l'instruction précédente. Par exemple, les expressions print sont "à l'intérieur" de la fonction "do\_hello" et pour cette raison doivent avoir un tab.
 
-Functions can also receive parameters a return values (using the "return" keyword):
+Les fonctions peuvent également recevoir des paramètres et retourner une valeur (en utilisant le mot-clé "return"):
 
 ```Python
 >>> def add_one(val):
@@ -39,29 +39,30 @@ Function got value 1
 2
 ```
 
-## Exercises with the math module
+## Exercices avec le module math
 
-Use the Python documentation about the math module (<https://docs.python.org/3/library/math.html>) to solve the following exercises:
 
-1.  Find the greatest common divisor of the following pairs of numbers: (15, 21), (152, 200), (1988, 9765).
+Utilisez la documentation Python concernant le module math (<https://docs.python.org/3/library/math.html>) pour résoudre les exercices suivants:
 
-2.  Compute the base-2 logarithm of the following numbers: 0, 1, 2, 6, 9, 15.
+1.  Trouvez le plus grand commun diviseur des paires de nombres suivantes: (15, 21), (152, 200), (1988, 9765).
 
-3.  Use the "input" function to ask the user for a number and show the result of the sine, cosine and tangent of the number. Make sure that you convert the user input from string to a number (use the int() or the float() function).
+2.  Calculez le logarithme en base 2 des nombres suivants: 0, 1, 2, 6, 9, 15.
 
-## Exercises with functions
+3.  Utilisez la fonction "input" pour demander un nombre à l'utilisateur et montrez le résultat du sinus, du cosinus et de la tangeante du nombre. Assurez-vous que vous convertissez l'input de l'utilisateur de chaîne à nombre (utilisez la fonction int() ou float()).
 
-1.  Implement the "add2" function that receives two numbers as arguments and returns the sum of the numbers. Then implement the "add3" function that receives and sums 3 parameters.
+## Exercices avec les fonctions
 
-2.  Implement a function that returns the greatest of two numbers given as parameters. Use the "if" statement to compare both numbers: <https://docs.python.org/3/tutorial/controlflow.html#if-statements>.
+1.  Implémentez la fonction "add2" qui reçoit deux nombres comme arguments et retourne la somme des deux nombres. Ensuite implémentez la fonction "add3" qui reçoit et additionne 3 paramètres.
 
-3.  Implement a function named "is\_divisible" that receives two parameters (named "a" and "b") and returns true if "a" can be divided by "b" or false otherwise. A number is divisible by another when the remainder of the division is zero. Use the modulo operator ("%").
+2.  Implémentez une fonction qui retourne le plus grand de deux nombres donnés en paramètres. utilisez l'expression "if" pour comparer les deux nombres: <https://docs.python.org/3/tutorial/controlflow.html#if-statements>.
 
-4.  Create a function named "average" that computes the average value of a list passed as parameter to the function. Use the "sum" and "len" functions.
+3.  Implémentez une fonction nommée "is\_divisible" qui reçoit deux paramètres (nommés "a" et "b") et retourne vrai si "a" peut être divisé par "b" ou faux autrement. Un nombre est divisible par un autre lorsque le reste de la division est zéro. Utilisez l'opérateur modulo (%).
 
-## Recursive functions
+4.  Créez une fonction nommée "moyenne" qui calcule la valeur moyenne d'une liste passée en paramètre d ela fonction. Utilisez les fonctions "sum" et "len".
 
-In computer programming, a recursive function is simply a function that calls itself. For instance take the factorial function.
+## Les fonctions récursives
+
+En programmation, une fonction récursive est simplement une fonction qui s'appelle elle-même. Par exemple, prenez la fonction factorielle.
 
 \begin{equation}
 f(x)=\begin{cases}
@@ -70,7 +71,7 @@ f(x)=\begin{cases}
 \end{cases}
 \end{equation}
 
-As an example, take the factorial of 5:
+Prenons comme cas concret la factorielle de 5:
 
 \begin{equation}
 \begin{split}
@@ -82,7 +83,7 @@ As an example, take the factorial of 5:
 \end{split}
 \end{equation}
 
-Basically, the factorial of 5 is 5 times the factorial of 4, etc. Finally, the factorial of 1 (or of zero) is 1 which breaks the recursion. In Python we could write the following recursive function:
+Pour l'essentiel, la factorielle de 5 est 5 fois la factorielle de 4, etc. Finalement, la factorielle de 1 (ou de zéro) est 1, ce qui rompt la récursion. En Python nous pourrions écrire la fonction récursive suivante:
 
 ```Python
 def factorial(x):
@@ -92,15 +93,15 @@ def factorial(x):
         return x * factorial(x-1)
 ```
 
-The trick with recursive functions is that there must be a "base" case where the recursion must end and a recursive case that iterates towards the base case. In the case of factorial we know that the factorial of zero is one, and the factorial of a number greater that zero will depend on the factorial of the previous number until it reaches zero.
+L'astuce avec les fonctions récursives est qu'il doit y avoir un cas "de base" où la récursion s'arrête et un cas récursif qui itère vers le cas de base. Dans la cas de la factorielle nous savons que la factorielle de zero est un, et la factorielle d'un nombre plus grand que zero va dépendre de la factorielle du nombre précédent jusqu'à ce celui-ci atteigne zéro.
 
-## Exercises with recursive functions
+## Exercices avec les fonctions récursives
 
-1.  Implement the factorial function and test it with several different values. Cross-check with a calculator.
+1.  Implémentez la fonction factorielle et testez-là avec plusieurs valeurs. Verifiez avec une calculette.
 
-2.  Implement a recursive function to compute the sum of the \(n\) first integer numbers (where \(n\) is a function parameter). Start by thinking about the base case (the sum of the first 0 integers is?) and then think about the recursive case.
+2.  Implémentez une fonction récursive pour calculer la somme des \(n\) premiers nombres entiers (où \(n\) est un paramètre de fonction). Commencez par réfléchir au cas de base (la somme des 0 premiers entiers est égale à combien?) et ensuite réfléchissez au cas résursif.
 
-3.  The Fibonnaci sequence is a sequence of numbers in which each number of the sequence matches the sum of the previous two terms. Given the following recursive definition implement \(fib(n)\).
+3.  La suite de Fibonnaci est une suite de nombres dans laquelle chaque nombre de la suite correspond à la somme des deux nombres précédents. Etant donnée la définition récursive suivante, implémentez \(fib(n)\).
 
     \begin{equation}
     fib(n)=\begin{cases}
@@ -110,4 +111,4 @@ The trick with recursive functions is that there must be a "base" case where the
     \end{cases}
     \end{equation}
 
-    Check your results for the first numbers of the sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+    Vérifiez vos résultats pour les premiers nombres de la suite: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...

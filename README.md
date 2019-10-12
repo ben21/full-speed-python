@@ -1,16 +1,11 @@
-# Full Speed Python
+# Python à toute vitesse
 
-Pdf and epub files can be downloaded from: https://github.com/joaoventura/full-speed-python/releases/
+Ce livre est la traduction française de "Full Speed Python", un très court manuel d'initiation à Python, écrit par João Ventura, Professeur Adjoint à l'Ecole supérieure de Technologie de Setúbal. Je l'ai traduit pour les élèves d'une formation de 9 semaines en développement web organisée par la Mission locale de Schaerbeek, à Bruxelles.
 
-This book aims to teach the Python programming language using a practical approach. Its method is quite simple: after a short introduction to each topic, the reader is invited to learn more by solving the proposed exercises.
+"Ce livre vise à enseigner le langage de programmation Python en suivant une approche pratique. Sa méthode est simple: après une courte introduction à chaque sujet, le lecteur est invité à en apprendre davantage en résolvant les exercices proposés.
 
-These exercises have been used extensively in my web development and distributed computing classes at the Superior School of Technology of Setúbal. With these exercises, most students are up to speed with Python in less than a month. In fact, students of the distributed computing course, taught in the second year of the software engineering degree, become familiar with Python's syntax in two weeks and are able to implement a distributed client-server application with sockets in the third week.
+Ces exercices ont été abondamment utilisés dans mes cours de développement web et de programmation distribuée à l'Ecole Supérieure de Technologie de Setúbal. Grâce à ces exercices, les élèves sont compétents en Python en moins d'un mois. En fait, les étudiants du cours de programmation distribuée, cours enseigné dans la seconde année du diplôme d'ingénieur informaticien, sont familiariés avec la syntaxe après deux semaines, et sont capables d'implémenter une application client-serveur distribuée avec sockets la troisième semaine. "
 
-The source of this book is available on github (https://github.com/joaoventura/full-speed-python). I welcome any pull requests to correct misspellings, suggest new exercises or to provide clarification of the current content.
+Si vous trouvez des fautes, n'hésitez pas à me faire une pull request.
 
-
-## Building
-
-Run `make pdf` or `make epub` to build the books.
-
-This project uses [pandoc](http://pandoc.org/) to build the books. The pdf file is built with pdflatex, so you may need to download a latex distribution.
+Benjamin Van Bever

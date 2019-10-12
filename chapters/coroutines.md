@@ -1,8 +1,8 @@
-# Coroutines
+# Les Coroutines
 
-Python coroutines are similar to generators but instead of producing data, coroutines are mostly used as data consumers. In other words, coroutines are functions that are resumed everytime a value is sent using the `send` method.
+Les coroutines de Python sont semblables aux générateurs, mais à la place de produire des données, les coroutines sont surtout utilisées pour consommer des données. En d'autres mots, les coroutines sont des fonctions qui reprennent leur activité chaque fois qu'une valeur est envoyée en utilisant la méthode `send`.
 
-The trick with coroutines is the use of the `yield` keyword on the right side of an assignment expression. Here's an example of a coroutine that just prints the values that are sent to it:
+La particularité des coroutines est leur usage du mot-clé `yield` du côté droit d'une expression d'assignation. Voici un exemple d'une coroutine qui imprime les valeurs qui lui sont envoyées:
 
 ```Python
 def coroutine():
@@ -22,9 +22,9 @@ Got 2
 Got 3
 ```
 
-The initial call to `next` is required to move the coroutine forward. You can see that it executes the print statement. Eventually, the function reaches the `yield` expression where it will wait to be resumed. Then, everytime a value is sent (with `send`), the coroutine function resumes from the `yield`, copies the value to **val** and prints it.
+L'appel initial à `next` est requis pour faire démarrer la coroutine. Vous pouvez voir qu'elle exécute l'expression print. Lorsque la fonction atteint l'expression `yield`, elle va attendre d'être relancée. Ensuite, à chaque fois qu'une valeur est envoyée (avec `send`), la fonction coroutine reprend depuis le `yield`, copie la valeur dans **val** et l'imprime.  
 
-Coroutines can be closed with the `close()` method.
+Les coroutines peuvent être refermées avec la méthode `close()`.
 
 ```Python
 >>> co.close()
@@ -34,19 +34,19 @@ Traceback (most recent call last):
 StopIteration
 ```
 
-## Exercises with coroutines
+## Exercices avec les coroutines
 
-1.  Create a coroutine named "square" that prints the square of any sent value.
+1.  Créez une coroutine nommée "square" qui imprime le carré de toute valeur qui lui est envoyée.
 
-2.  Implement the "minimize" coroutine that keeps and prints the minimum value that is sent to the function.
+2.  Implémentez la coroutine "minimize" qui retient et imprime la valeur minimale envoyée à la fonction.
 
-## Pipelines
+## Les Pipelines
 
-Coroutines can be used to implement data pipelines where one coroutine will send data to the next coroutine in the pipeline. Coroutines push data into the pipeline using the `send()` method.
+Les coroutines peuvent être utilisées pour implémenter des pipelines de données dans lesquelles une coroutine va envoyer des données à la coroutine suivante dans le pipeline. Les couroutines insèrent des données dans le pipeline en utilisant la méthode `send()`.
 
 ![](images/coroutine_pipeline.png)
 
-Here's an example of a small pipeline where the values sent to the producer coroutine are squared and sent to the consumer coroutine for printing:
+Voici un exemple d'une petites pipeline dans laquelle les valeurs envoyées à la coroutine "producer" sont mises au carré et envoyée à la coroutine "consumer" pour être imprimées:
 
 ```Python
 def producer(consumer):
@@ -62,7 +62,7 @@ def consumer():
         print('Consumer got', val)
 ```
 
-As above, coroutines must be "primed" with `next` before any value can be sent.
+Comme plus haut, les coroutines doivent être "initialisées" avec `next` avant qu'aucune valeur ne puisse être envoyée.
 
 ```Python
 >>> cons = consumer()
@@ -80,7 +80,7 @@ Consumer got 4
 Consumer got 9
 ```
 
-Also, with coroutines, data can be sent to multiple destinations.The following example implements two consumers where the first only prints numbers in 0..10 and the second only print numbers in 10..20:
+Aussi, avec les coroutines, les données peuvent être envoyées vers de multiple destinations. L'exemple suivant implémente deux consommateurs dont le premier imprime seulement les nombres compris entre 0 et 10 et le second imprime seulement les nombre de 10 à 20:
 
 ```Python
 def producer(consumers):
@@ -105,7 +105,7 @@ def consumer(name, low, high):
         print("%s closed" % name)
 ```
 
-As before, coroutines must be "primed" before any value can be sent.
+Comme plus haut, les coroutines doivent être "initialisées" avant qu'une valeur puisse être envoyée.
 
 ```Python
 >>> con1 = consumer('Consumer 1', 00, 10)
@@ -133,12 +133,12 @@ Consumer 1 closed
 Consumer 2 closed
 ```
 
-The data is sent to all consumers but only the second executes the print statement. Notice the use of the `GeneratorExit` exception. Sometimes it can be useful to catch the exception and inform the downstream coroutines that the pipeline is no longer useful.
+Les données sont envoyées à tous les consommateurs, mais seulement le second exécute l'expression print. Remarquez l'utilisation de l'exception `GeneratorExit`. Il peut parfois être utile d'intercepter l'exception et d'informer les coroutines en aval que la pipeline n'est plus utile.
 
 ![](images/consumers_pipeline.png)
 
-## Exercises with coroutine pipelines
+## Exercices avec des pipelines de coroutines
 
-1.  Implement a producer-consumer pipeline where the values squared by the producer are sent to two consumers. One should store and print the minimum value sent so far and the other the maximum value.
+1.  Implémentez une pipeline producteur-consommateur dans laquelle toutes les valeurs mises au carré par le producteur sont envoyées à deux consommateurs. L'un devrait stocker et imprimer la valeur minimum jusque là, et l'autre la valeur maximum.
 
-2.  Implement a producer-consumer pipeline where the values squared by the producer are dispatched to two consumers, one at a time. The first value should be sent to consumer 1, the second value to consumer 2, third value to consumer 1 again, and so on. Closing the producer should force the consumers to print a list with the numbers that each one obtained.
+2.  Implémentez une pipeline producteur-consommateur dans laquelle les valeurs mises au carré par le producteur sont envoyés à deux consommateurs, un à la fois. La première valeur devrait être envoyée au consommateur 1, la seconde valeur au consommateur 2, la troisièmme valeur à nouveau au consommateur 1, et ainsi de suite. Fermer le producteur devrait forcer les consommateurs à imprimer une liste contenant les nombres que chacun d'eux a obtenu.

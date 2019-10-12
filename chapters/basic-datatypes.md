@@ -1,6 +1,6 @@
-# Numbers and strings
+# Nombres et chaînes de caractères
 
-In this chapter we will work with the most basic datatypes, numbers and strings. Start your Python REPL and write the following:
+Dans ce chapitre nous travaillerons avec les types de données les plus basiques, les nombres et les chaînes de caractères. Démarrez votre REPL Python et écrivez ce qui suit:
 
 ```Python
 >>> a = 2
@@ -11,7 +11,7 @@ In this chapter we will work with the most basic datatypes, numbers and strings.
 <class 'float'>
 ```
 
-Basically, you are declaring two variables (named "a" and "b") which will hold some numbers: variable "a" is an integer number while variable "b" is a real number. We can now use our variables or any other numbers to do some calculations:
+Pour l'essentiel, vous déclarez deux variables (nommées "a" et "b") qui vont contenir des nombres: la variable "a" est un nombre entier tandis que la variable "b" est un nombre réel. Nous pouvons maintenant utiliser nos variables ou n'importe quels autres nombres pour effectuer des calculs:
 
 ```Python
 >>> a + b
@@ -22,7 +22,7 @@ Basically, you are declaring two variables (named "a" and "b") which will hold s
 7.333333333333333
 ```
 
-Python also has support for string datatypes. Strings are sequences of characters (like words) and can be defined using single or double quotes:
+Python gère également les chaînes de caractères. Les chaînes de caractères sont des suites de lettres (comme les mots) et peuvent être définies en utilisant des guillemets simples ou doubles:
 
 ```Python
 >>> hi = "hello"
@@ -33,7 +33,7 @@ Python also has support for string datatypes. Strings are sequences of character
 'goodbye'
 ```
 
-You can add strings to concatenate them but you can not mix different datatypes, such as strings and integers.
+Vous pouvez additionner les chaînes de caractères pour les concaténer, mais vous ne pouvez pas mélanger différents types de données, tels que les chaînes de caractères et les nombres.
 
 ```Python
 >>> hi + "world"
@@ -44,46 +44,47 @@ Traceback (most recent call last):
 TypeError: must be str, not int
 ```
 
-However, multiplication works as repetition:
+Néanmoins, la multiplication fonctionne comme répétition:
 
 ```Python
 >>> "Hello" * 3
 'HelloHelloHello'
 ```
 
-## Exercises with numbers
+## Exercices avec les nombres
 
-1.  Try the following mathematical calculations and guess what is happening: \((3 / 2)\), \((3 // 2)\), \((3 \% 2)\), \((3**2)\).
+1.  Essayez les calculs mathématiques suivants et devinez ce qui se passe: \((3 / 2)\), \((3 // 2)\), \((3 \% 2)\), \((3**2)\).
 
-    Suggestion: check the Python library reference at <https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex>.
+    Suggestion: Ouvrez la documentation de référence de la bibliothèque Python à <https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex>.
 
-2.  Calculate the average of the following sequences of numbers: (2, 4), (4, 8, 9), (12, 14/6, 15)
 
-3.  The volume of a sphere is given by (4/3 * pi * r^3). Calculate the volume of a sphere of radius 5. Suggestion: create a variable named "pi" with the value of 3.1415.
+2.  Calculez la moyenne des séquences de nombres suivantes: (2, 4), (4, 8, 9), (12, 14/6, 15)
 
-4.  Use the modulo operator (%) to check which of the following numbers is even or odd: (1, 5, 20, 60/7).
+3.  Le volume d'une sphère est donné par (4/3 * pi * r^3). Calculez le volume d'une sphère de radius 5. Suggestion: créez une variable nommée "pi" avec une valeur de 3.145.
 
-    Suggestion: the remainder of \(x/2\) is always zero when \(x\) is even.
+4.  Utilisez l'opérateur modulo (%) pour voir lesquels the nombres suivants sont pairs: (1, 5, 20, 60/7).
 
-5.  Find some values for \(x\) and \(y\) such that \(x < 1/3 < y\) returns "True" on the Python REPL. Suggestion: try \(0 < 1/3 < 1\) on the REPL.
+    Suggestion: le reste de la division \(x/2\) est toujours zéro lorsque \(x\) est pair. 
 
-## Exercises with strings
+5.  Trouvez des valeurs pour \(x\) et \(y\) telles que \(x < 1/3 < y\) retourne "True" sur la REPL Python. Suggestion: essayez \(0 < 1/3 < 1\) sur la REPL.
 
-Using the Python documentation on strings (<https://docs.python.org/3/library/stdtypes.html?#text-sequence-type-str>), solve the following exercises:
+## Exercices avec des chaînes de caractères
 
-1.  Initialize the string "abc" on a variable named "s":
+En utilisant la documentation de Python sur les chaînes de caractères (<https://docs.python.org/3/library/stdtypes.html?#text-sequence-type-str>), effectuez les exercices suivants:
 
-    1.  Use a function to get the length of the string.
+1.  Initialisez la chaîne "abc" dans une variable nommée "s":
 
-    2.  Write the necessary sequence of operations to transform the string "abc" in "aaabbbccc". Suggestion: Use string concatenation and string indexes.
+    1.  Utilisez une fonction pour obtenir la longueur de la chaîne.
 
-2.  Initialize the string "aaabbbccc" on a variable named "s":
+    2.  Ecrivez la séquence d'opérations nécessaire pour transformer la chaîne "abc" en "aaabbbccc". Sugestion: utilisez la concaténation de chaînes et les index de chaînes.
 
-    1.  Use a function that allows you to find the first occurence of "b" in the string, and the first occurence of "ccc".
+2.  Initialisez la chaîne "aaabbbccc" dans une variable nommée "s":
 
-    2.  Use a function that allows you to replace all occurences of "a" to "X", and then use the same function to change only the first occurence of "a" to "X".
+    1.  Utilisez une fonction qui vous permet de trouver la première occurrence de "b" dans la chaîne, et la première occurrence de "ccc".
 
-3.  Starting from the string "aaa bbb ccc", what sequences of operations do you need to arrive at the following strings? You can use the "replace" function.
+    2.  Utilisez une fonction qui vous permet de remplacer toutes les occurrences de "a" par "x", et ensuite utilisez la même fonction pour remplacer seulement la première occurrence de "a" par "x".
+
+3.  En commençant par la chaîne "aaa bbb ccc", de quelles suites d'opérations avez-vous besoin pour arriver aux chaînes suivantes ? Vous pouvez utiliser la fonciton "replace".
 
     1.  "AAA BBB CCC"
 

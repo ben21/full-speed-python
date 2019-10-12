@@ -1,6 +1,6 @@
-# Dictionaries
+# Les Dictionnaires
 
-In this chapter we will work with Python dictionaries. Dictionaries are data structures that indexes values by a given key (key-value pairs). The following example shows a dictionary that indexes students ages by name.
+Dans ce chapitre nous allons travailler avec les dictionnaires Python. Les dictionnaires sont des structures de données qui indexent les valeurs par une clé donnée (paires clé-valeur). L'exemple suivant  montre un dictionnaire qui indexe les âges des étudiants par nom.
 
 ```Python
 ages = {
@@ -18,7 +18,7 @@ ages = {
 10
 ```
 
-It is possible to iterate over the contents of a dictionary using "items", like this:
+Il est possible d'itérer sur les contenus d'un dictionnaire en utilisant "items", comme ceci:
 
 ```Python
 >>> for name, age in ages.items():
@@ -34,7 +34,7 @@ Maria 12
 Gabriel 10
 ```
 
-However, dictionary keys don’t necessarily need to be strings but can be any [immutable](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) object:
+Néanmoins, les clés de dictionnaire ne doivent pas être nécessairement des chaînes de caractères mais peuvent être n'importe quel objet [immuable](https://docs.python.org/3/tutorial/datastructures.html#dictionaries):
 
 ```Python
 d = {
@@ -47,7 +47,7 @@ d = {
 [2, 2, 2]
 ```
 
-And you can also use other dictionaries as values:
+Et vous pouvez aussi utiliser d'autres dictionnaires comme valeurs:
 
 ```Python
 students = {
@@ -62,13 +62,13 @@ students = {
 'Lisbon'
 ```
 
-This is quite useful to structure hierarchical information.
+C'est très utile pour structurer une information hiérarchique.
 
-## Exercises with dictionaries
+## Exercices avec les dictionnaires
 
-Use the Python documentation at <https://docs.python.org/3/library/stdtypes.html#mapping-types-dict> to solve the following exercises.
+Utilisez la documentation Python à <https://docs.python.org/3/library/stdtypes.html#mapping-types-dict> pour résoudre les exercices suivants.
 
-Take the following Python dictionary:
+Prenez le dictionnaire Python suivant:
 
     ages = {
         "Peter": 10,
@@ -81,17 +81,17 @@ Take the following Python dictionary:
         "Gabriel": 10,
     }
 
-1.  How many students are in the dictionary? Search for the "len" function.
+1.  Combien d'étudiants sont dans le dictionnaire? Etudiez la fonction "len".
 
-2.  Implement a function that receives the "ages" dictionary as parameter and returns the average age of the students. Traverse all items on the dictionary using the "items" method as above.
+2.  Implémentez une fonction qui reçoit le dictionnaire "ages" comme paramètre et retourne l'âge moyen des étudiants. Traversez tous les éléments du dictionnaire en utilisant la méthode "items" comme expliqué plus haut.
 
-3.  Implement a function that receives the "ages" dictionary as parameter and returns the name of the oldest student.
+3.  Implémentez une fonction qui reçoit le dictionnaire "ages" comme paramètre et retourne le nom de l'étudiant le plus âgé.
 
-4.  Implement a function that receives the "ages" dictionary and a number "n" and returns a new dict where each student is \(n\) years older. For instance, *new_ages(ages, 10)* returns a copy of "ages" where each student is 10 years older.
+4.  Implémentez une fonction qui reçoit le dictionnaire "ages" et une nombre "n" et retourne un nouveau dictionnaire dans lequel chaque étudiant est plus âgé de \(n\) ans. Par exemple, *new_ages(ages, 10)* retourne une copie de "ages" dans laquelle chaque étudiant est 10 ans plus âgé.
 
-## Exercises with sub-dictionaries
+## Exercices avec des sous-dictionnaires
 
-Take the following dictionary:
+Prenez le dictionnaire suivant:
 
     students = {
         "Peter": {"age": 10, "address": "Lisbon"},
@@ -99,8 +99,8 @@ Take the following dictionary:
         "Anna": {"age": 9, "address": "Lisbon"},
     }
 
-1.  How many students are in the "students" dict? Use the appropriate function.
+1.  Combien d'étudiants sont-ils dans le dict "students"? Utilisez la fonction appropriée.
 
-2.  Implement a function that receives the students dict and returns the average age.
+2.  Implémentez une fonction qui reçoit le dict "students" et retourne l'âge moyen.
 
-3.  Implement a function that receives the students dict and an address, and returns a list with names of all students whose address matches the address in the argument. For instance, invoking "find_students(students, ’Lisbon’)" should return Peter and Anna.
+3. Implémentez une fonction qui reçoit le dict "students" et une adresse, et retourne une liste avec les noms de tous les étudiants dont l'adresse correspond à l'adresse dans l'argument. Par exemple, invoquer "find_students(students, ’Lisbon’)" devrait retourner Peter et Anna.

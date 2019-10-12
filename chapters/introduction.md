@@ -1,13 +1,13 @@
 # Introduction
 
-This book aims to teach the Python programming language using a practical approach. Its method is quite simple: after a short introduction to each topic, the reader is invited to learn more by solving the proposed exercises.
+Ce livre vise à enseigner le langage de programmation Python en suivant une approche pratique. Sa méthode est simple: après une courte introduction à chaque sujet, le lecteur est invité à en apprendre davantage en résolvant les exercices proposés.
 
-These exercises have been used extensively in my web development and distributed computing classes at the Superior School of Technology of Setúbal. With these exercises, most students are up to speed with Python in less than a month. In fact, students of the distributed computing course, taught in the second year of the software engineering degree, become familiar with Python’s syntax in two weeks and are able to implement a distributed client-server application with sockets in the third week.
+Ces exercices ont été abondamment utilisés dans mes cours de développement web et de programmation distribuée à l'Ecole Supérieure de Technologie de Setúbal. Grâce à ces exercices, les élèves sont compétents en Python en moins d'un mois. En fait, les étudiants du cours de programmation distribuée, cours enseigné dans la seconde année du diplôme d'ingénieur informaticien, sont familiariés avec la syntaxe après deux semaines, et sont capables d'implémenter une application client-serveur distribuée avec sockets la troisième semaine. 
 
-Please note that this book is a work in progress and, as such, may contain a few spelling errors that may be corrected in the future. However it is made available now as it is so it can be useful to anyone who wants to use it. I sincerely hope you can get something good through it.
+Ce livre est un travail en cours d'élaboration et il est possible qu'il contienne quelques fautes d'orthographe qui seront corrigées dans le futur. Néanmoins il est rendu disponible dès maintenant de manière à pouvoir être utile à quiconque souhaite l'utiliser. J'espère sincèrement que vous en tirerez quelque chose de positif.
 
-The source of this book is available on github (<https://github.com/joaoventura/full-speed-python>). I welcome any pull requests to correct misspellings, suggest new exercises or to provide clarification of the current content.
+Le code source de ce livre est disponible sur github (<https://github.com/joaoventura/full-speed-python>). J'accepterai avec plaisir toute pull request visant à corriger l'orthographe ou la grammaire, à suggérer de nouveau exercices ou à clarifier le contenu actuel.
 
-All the best,
+Bien à vous,
 
-João Ventura - Adjunct Professor at the Escola Superior de Tecnologia de Setúbal.
+João Ventura - Professeur Adjoint à l'Ecole supérieure de Technologie de Setúbal.

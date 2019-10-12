@@ -1,6 +1,6 @@
-# Iterators
+# Les Itérateurs
 
-As we saw previously, in Python we use the "for" loop to iterate over the contents of objects:
+Comme nous l'avons vu précédemment, en Python nous utilisons la boucle "for" pour itérer sur les contenus des objets:
 
 ```Python
 >>> for value in [0, 1, 2, 3, 4, 5]:
@@ -14,9 +14,9 @@ As we saw previously, in Python we use the "for" loop to iterate over the conten
 25
 ```
 
-Objects that can be used with a "for" loop are called iterators. An iterator is, therefore, an object that follows the iteration protocol.
+Les objets qui peuvent être utilisés dans une boucle "for" sont appelés itérateurs. Partant de là, un itérateur est un objet qui suit le protocole d'itération.
 
-The built-in function "iter" can be used to build iterator objects, while the "next" function can be used to gradually iterate over their content:
+La fonction intégrée "iter" peut-être utilisée pour construire des objets intérateurs, tandis que la fonction "next" peut être utilisée pour itérer graduellement sur leur contenu:
 
 ```Python
 >>> my_iter = iter([1, 2, 3])
@@ -34,11 +34,11 @@ Traceback (most recent call last):
 StopIteration
 ```
 
-If there are no more elements, the iterator raises a "StopIteration" exception.
+S'il n'y a plus d'élément, l'itérateur lève une exception "StopIteration".
 
-## Iterator classes
+## Les Classes Itérateurs
 
-Iterators can be implemented as classes. You just need to implement the "\_\_next\_\_" and "\_\_iter\_\_" methods. Here’s an example of a class that mimics the "range" function, returning all values from "a" to "b":
+Les itérateurs peuvent être implémentés comme classes. Vous devez seulement implémenter les méthodes "\_\_next\_\_" et "\_\_iter\_\_". Voici un exemple de classe qui imite la fonction "range", retournant toutes les valeurs de "a" jusqu'à "b":
 
 ```Python
 class MyRange:
@@ -59,7 +59,7 @@ class MyRange:
             raise StopIteration
 ```
 
-Basically, on every call to "next" it moves forward the internal variable "a" and returns its value. When it reaches "b", it raises the StopIteration exception.
+Pour l'essentiel, à chaque appel, la méthode "next" augmente la variable "a" d'une unité et retourne sa valeur. Lorsque celle-ci atteint la valeur de "b", la méthode lève une exception StopIteration.
 
 ```Python
 >>> myrange = MyRange(1, 4)
@@ -75,7 +75,7 @@ Traceback (most recent call last):
 StopIteration
 ```
 
-But most important, you can use the iterator class in a "for" loop:
+Mais le plus important, c'est que vous pouvez utiliser la classe itérateur dans une boucle "for":
 
 ```Python
 >>> for value in MyRange(1, 4):
@@ -86,16 +86,16 @@ But most important, you can use the iterator class in a "for" loop:
 3
 ```
 
-## Exercises with iterators
+## Exercices avec les itérateurs
 
-1.  Implement an iterator class to return the square of all numbers from "a" to "b".
+1.  Implémentez une classe itérateur qui retourne le carré de tous les nombres de "a" à "b".
 
-2.  Implement an iterator class to return all the even numbers from 1 to \(n\).
+2.  Implémentez une classe térateur qui retourne tous les nombres pairs de 1 à \(n\).
 
-3.  Implement an iterator class to return all the odd numbers from 1 to \(n\).
+3.  Implémentez une classe itérateur qui retourne tous les nombres impairs de 1 à \(n\).
 
-4.  Implement an iterator class to return all numbers from \(n\) down to 0.
+4.  Implémentez une classe itérateur qui retourne tous les nombres de \(n\) positif jusqu'à 0.
 
-5.  Implement an iterator class to return the fibonnaci sequence from the first element up to \(n\). You can check the definition of the fibonnaci sequence in the function’s chapter. These are the first numbers of the sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+5.  Implémentez une classe intérateur qui retourne la suite de Fibonnaci depuis le premier élément jusqu'à \(n\). Vous pouvez vérifier la définition de la suite de Fibonnaci dans le chapitre sur les fonctions. Voici les premiers nombres de la suite: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
-6.  Implement an iterator class to return all consecutive pairs of numbers from 0 until \(n\), such as (0, 1), (1, 2), (2, 3)...
+6.  Implémentez une classe itérateur qui retourne toutes les paires consécutives de nombres de 0 à \(n\), telles que (0, 1), (1, 2), (2, 3)...

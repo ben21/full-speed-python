@@ -1,41 +1,41 @@
 # Installation
 
-In this chapter we will install and run the Python interpreter in your local computer.
+Dans ce chapitre nous installerons et lancerons l'interpréteur Python sur votre ordinateur.
 
-## Installing on Windows
+## Pour installer sur Windows
 
-1.  Download the latest Python 3 release for Windows on <https://www.python.org/downloads/windows/> and execute the installer. At the time of writing, this is Python 3.6.4.
+1.  Téléchargez la dernière version de Python 3 pour Windows à <https://www.python.org/downloads/windows/> et lancez l'installeur. Au moment d'écrire ce livre, la dernière version est Python 3.7.4.
 
-2.  Make sure that the "Install launcher for all users" and "Add Python to PATH" settings are selected and choose "Customize installation".
+2.  Assurez-vous de sélectionner les paramètres "Install launcher for all users" et "Add Python to PATH", et choisissez "Customize installation".
 
     ![Windows installation](images/python_windows.jpg){width=62%}
 
-3.  In the next screen "Optional Features", you can install everything, but it is essential to install "pip" and "pylauncher (for all users)". Pip is the Python package manager that allows you to install several Python packages and libraries.
+3.  Sur l'écran suivant, "Optional Features", vous pouvez tout installer, mais il est surtout essentiel d'installer "pip" et "pylauncher (for all users)". Pip est le gestionnaire de paquets de Python qui vous permet d'installer de nombreux paquets et bibliothèques.
 
-4.  In the Advanced Options, make sure that you select "Add Python to environment variables". Also, I suggest that you change the install location to something like C:\\Python36\\ as it will be easier for you to find the Python installation if something goes wrong.
+4.  Dans les Options Avancées, assurez-vous de sélectionner "Add Python to environment variables". Aussi, je vous suggère de changer l'emplacement de l'installation vers quelque chose comme C:\\Python36\\. Ce sera plus facile pour vous de retrouver l'installation de Python en cas de problème.
 
     ![Windows installation](images/python_windows2.jpg){width=62%}
 
-5.  Finally, allow Python to use more than 260 characters on the file system by selecting "Disable path length limit" and close the installation dialog.
+5.  Finalement, permettez à Python d'utiliser plus de 260 charactères dans le système de fichiers en sélectionnant "Disable path length limit" et fermez la boite de dialogue d'installation
 
     ![Windows installation](images/python_windows3.jpg){width=62%}
 
-6.  Now, open the command line (cmd) and execute "python" or "python3". If everything was correctly installed, you should see the Python REPL. The REPL (from Read, Evaluate, Print and Loop) is a environment that you can use to program small snippets of Python code. Run *exit()* to leave the REPL.
+6.  Maintenant, ouvrez la ligne de commande (cmd) et exécutez "python" ou "python3". Si tout est correctement installé, vous devriez voir la REPL de Python. La REPL (pour Read, Evaluate, Print Loop) est un environnement que vous pouvez utiliser pour programmer des petits bouts de code en Python. Tapez *exit()* pour quitter la REPL.
 
     ![Python REPL](images/python_windows4.jpg){width=62%}
 
-## Installing on macOS
+## Pour installer sur MacOS
 
-You can download the latest macOS binary releases from <https://www.python.org/downloads/mac-osx/>. Make sure you download the latest Python 3 release (3.6.4 at the time of writing). You can also use Homebrew, a package manager for macOS (<https://brew.sh/>). To install the latest Python 3 release with Homebrew, just do "`brew install python3`" on your terminal. Another option is to use the MacPorts package manager (<https://www.macports.org/>) and command "`port install python36`".
+Vous pouvez télécharger les derniers exécutables depuis <https://www.python.org/downloads/mac-osx/>. Assurez-vous de télécharger les dernières versions pour Python 3 (Python 3.7.4 au moment d'écrire ces lignes).Vous pouvez également utiliser Homebrew, un gestionnaire de paquets pour MacOS (<https://brew.sh/>). Pour installer la dernière version de Python 3 avec Homebrew, tapez "`brew install python3`" sur votre terminal. Une autre option est d'utiliser le gestionnaire de paquets MacPorts (<https://www.macports.org/>) et la commande "`port install python36`".
 
 ![Python REPL](images/python_macos.png){width=62%}
 
-Finally, open the terminal, execute `python3` and you should see the Python REPL as above. Press Ctrl+D or write `exit()` to leave the REPL.
+Finalement, ouvrez le terminal, exécutez `python3` et vous devriez voir la REPL de Python comme expliqué plus haut. Pressez Ctrl+D ou tapez `exit()` pour quitter la REPL.
 
-## Installing on Linux
+## Pour installer sur Linux
 
-To install Python on Linux, you can download the latest Python 3 source releases from <https://www.python.org/downloads/source/> or use your package manager (apt-get, aptitude, synaptic and others) to install it. To make sure you have Python 3 installed on your system, run `python3 --version` in your terminal.
+Pour installer Python sur Linux, vous pouvez télécharger les derniers fichiers sources de Python 3 depuis <https://www.python.org/downloads/source/> ou utiliser le gestionnaire de paquets (apt-get, aptitude, synaptic ou autres) pour l'installer. Pour vous assurer d'avoir Python 3 installé sur votre système, tapez `python3 --version` dans votre terminal.
 
-Finally, open the terminal, execute `python3` and you should see the Python REPL as in the following image. Press Ctrl+D or write `exit()` to leave the REPL.
+Finalement, ouvrez le terminal, exécutez `python3` et vous devriez voir la REPL de Python comme dans l'image suivante. Pressez Ctrl+D ou tapez `exit()` pour quitter la REPL.
 
 ![Python REPL](images/python_linux.png){width=62%}

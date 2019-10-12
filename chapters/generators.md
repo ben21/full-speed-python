@@ -1,6 +1,6 @@
-# Generators
+# Les Générateurs
 
-If you read the previous chapter, you know that iterators are objects that are regularly used with "for" loops. In other words, iterators are objects that implement the iteration protocol. A Python generator is a convenient way to implement an iterator. Instead of a class, a generator is a function which returns a value each time the "yield" keyword is used. Here’s an example of a generator to count the values between two numbers:
+Si vous avez lu le chapitre précédent, vous savez que les itérateurs sont des objets qui sont régulièrement utilisés dans les boucles "for". En d'autres mots, les itérateurs sont des objets qui implémentent le protocole d'itération. Un générateur Python est un moyen pratique d'implémenter un itérateur. Au lieu d'une classe, un générateur est une fonction qui retourne une valeur à chaque fois que le mot-clé "yield" est utilisé. Voici l'exemple d'un générateur qui compte les valeurs entre deux nombres:
 
 ```Python
 def myrange(a, b):
@@ -9,7 +9,7 @@ def myrange(a, b):
         a += 1
 ```
 
-Like iterators, generators can be used with the "for" loop:
+Tout comme les itérateurs, les générateurs peuvent être utilisés dans une boucle "for":
 
 ```Python
 >>> for value in myrange(1, 4):
@@ -20,7 +20,7 @@ Like iterators, generators can be used with the "for" loop:
 3
 ```
 
-Under the hood, generators behave similarly to iterators:
+Sous le capot, les générateurs se comportent d'une manière semblable aux itérateurs:
 
 ```Python
 >>> seq = myrange(1,3)
@@ -34,9 +34,9 @@ Traceback (most recent call last):
 StopIteration
 ```
 
-The interesting thing about generators is the "yield" keyword. The "yield" keyword works much like the "return" keyword, but unlike "return", it allows the function to eventually resume its execution. In other words, each time the next value of a generator is needed, Python wakes up the function and resumes its execution from the "yield" line as if the function had never exited.
+La chose intéressante à propos des générateurs est le mot-clé "yield". Le mot-clé "yield" fonctionne de manière similaire au mot-clé "return", mais à la différence de "return", il permet à la fonction de reprendre son exécution. En d'autres mots, à chaque fois que la valeur suivante d'un générateur est demandée, Python réveille la fonction et reprend son exécution depuis la ligne commençant par "yield" comme si la fonction ne s'était jamais interrompue.
 
-Generator functions can use other functions inside. For instance, it is very common to use the "range" function to iterate over a sequence of numbers:
+Les fonctions générateurs peuvent utiliser d'autres fonctions à l'intérieur d'elles-mêmes. Par exemple, il est très courant d'utiliser la fonction "range" pour itérer sur une suite de nombres.
 
 ```Python
 def squares(n):
@@ -44,16 +44,16 @@ def squares(n):
         yield value * value
 ```
 
-## Exercises with generators
+## Exercices avec les générateurs
 
-1.  Implement a generator called "squares" to yield the square of all numbers from \(a\) to \(b\). Test it with a "for" loop and print each of the yielded values.
+1.  Implémentez un générateur appelé "squares" qui produit (yield) les carrés de tous les nombres de \(a\) à \(b\). Testez-la avec une boucle "for"" et imprimez chacune des valeurs produites.
 
-2.  Create a generator to yield all the even numbers from 1 to \(n\).
+2.  Créez un générateur qui produit tous les nombres pairs de 1 à \(n\).
 
-3.  Create another generator to yield all the odd numbers from 1 to \(n\).
+3. Créez un autre générateur qui produit tous les nombres impairs de 1 à \(n\).
 
-4.  Implement a generator that returns all numbers from \(n\) down to 0.
+4.  Implémentez un générateur qui renvoie tous les nombres de \(n\) positif jusqu'à 0. 
 
-5.  Create a generator to return the fibonnaci sequence starting from the first element up to \(n\). The first numbers of the sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+5. Créez un générateur qui renvoie la suite de Fibonnaci en commençant par le premier élément jusqu'à \(n\). Les premiers nombres de la suite sont: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
-6.  Implement a generator that returns all consecutive pairs of numbers from 0 to \(n\), such as (0, 1), (1, 2), (2, 3)...
+6.  Implémentez un générateur qui renvoie toutes les paires consécutives de nombres de 0 à \(n\),, sou sla forme (0, 1), (1, 2), (2, 3)...

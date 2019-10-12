@@ -1,8 +1,8 @@
-# Lists
+# Les listes
 
-Python lists are data structures that group sequences of elements. Lists can have elements of several types and you can also mix different types within the same list although all elements are usually of the same datatype.
+Les listes de Python sont des structures de données qui groupent des suites d'éléments. Les listes peuvent avoir des éléments de différents types et vous pouvez aussi mélanger des types différents au sein de la même liste, bien que la plupart du temps tous les éléments sont du même type.
 
-Lists are created using square brackets and the elements separated by commas. The elements in a list can be accessed by their positions where 0 is the index of the first element:
+Les listes sont créées en utilisant des crochets et les éléments sont séparés par des virgules. On peut accéder aux éléments d'une liste par leurs positions respectives. 0 est l'index du premier élément. 
 
 ```Python
 >>> l = [1, 2, 3, 4, 5]
@@ -12,9 +12,9 @@ Lists are created using square brackets and the elements separated by commas. Th
 2
 ```
 
-Can you access the number 4 in the previous list?
+Pouvez-vous accéder au numéro 4 de la liste précédente ?
 
-Sometimes you want just a small portion of a list, a sublist. Sublists can be retrieved using a technique called *slicing*, which consists on defining the start and end indexes:
+Parfois vous voulez juste une petite portion d'une liste, une sous-liste. Les sous-listes peuvent être récupérées en utilisant une technique appelée *slicing*, qui consiste à définir les index de début et de fin.
 
 ```Python
 >>> l = ['a', 'b', 'c', 'd', 'e']
@@ -22,7 +22,7 @@ Sometimes you want just a small portion of a list, a sublist. Sublists can be re
 ['b', 'c']
 ```
 
-Finally, arithmetic with lists is also possible, like adding two lists together or repeating the contents of a list.
+Finalement, il est aussi possible de faire de l'arithmétique avec les listes, comme ajouter deux listes ensemble ou répéter the contenus d'une liste.
 
 ```Python
 >>> [1,2] + [3,4]
@@ -31,51 +31,51 @@ Finally, arithmetic with lists is also possible, like adding two lists together 
 [1, 2, 1, 2]
 ```
 
-## Exercises with lists
+## Exercices avec des listes
 
-Create a list named "l" with the following values ([1, 4, 9, 10, 23]). Using the Python documentation about lists (<https://docs.python.org/3.5/tutorial/introduction.html#lists>) solve the following exercises:
+Créez une liste nommée "l" avec les valeurs suivantes ([1, 4, 9, 10, 23]). En utilisant la documentation de Python sur les listes (<https://docs.python.org/3.5/tutorial/introduction.html#lists>) effectuez les exercices suivants:
 
-1.  Using list slicing get the sublists \[4, 9\] and \[10, 23\].
+1.  En utilisant le slicing de liste obtenez les sous-listes \[4, 9\] et \[10, 23\].
 
-2.  Append the value 90 to the end of the list "l". Check the difference between list concatenation and the "append" method.
+2.  Ajoutez ("append" en anglais) la valeur 90 à la fin de la liste "l". Vérifiez la différence entre la concaténation et la méthode "append".
 
-3.  Calculate the average value of all values on the list. You can use the "sum" and "len" functions.
+3.  Calculez la valeur moyennne de toutes les valeurs de la liste. Vous pouvez également utiliser les fonctions "sum" et "len".
 
-4.  Remove the sublist [4, 9].
+4.  Supprimez la sous-liste [4, 9].
 
-## List comprehensions
+## Les compréhensions de liste
 
-List comprehensions are a concise way to create lists. It consists of square brackets containing an expression followed by the "for" keyword. The result will be a list whose results match the expression. Here’s how to create a list with the squared numbers of another list.
+Une compréhension de liste est une manière concise d'écrire une liste. Elle consiste en des crochets contenant une expression suivie du mot-clé "for". Le résultat sera une liste dont les résultats correspondent à l'expression. Voici comment créer une liste avec les nombres d'une autre liste, mais carrés.
 
 ```Python
 >>> [x*x for x in [0, 1, 2, 3]]
 [0, 1, 4, 9]
 ```
 
-Given its flexibility, list comprehensions generally make use of the "range" function which returns a range of numbers:
+Du fait de sa flexibilité, les compréhensions de liste utilisent généralement la fonction "range" qui retourne un intervalle ("range en anglais"):
 
 ```Python
 >>> [x*x for x in range(4)]
 [0, 1, 4, 9]
 ```
 
-Sometimes you may want to filter the elements by a given condition. The "if" keyword can be used in those cases:
+Parfois vous pourriez vouloir filtrer les éléments selon une condition donnée. Le mot-clé "if" peut être utilisé dans ces cas-là:
 
 ```Python
 >>> [x for x in range(10) if x % 2 == 0]
 [0, 2, 4, 6, 8]
 ```
 
-The example above returns all even values in range 0..10. More about list comprehensions can be found at <https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions>.
+L'exemple ci-dessus retourne toutes les valeurs paires dans un intervalle 0..10. Vous pouvez trouve plus d'informations sur lescompréhensions de liste à <https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions>.
 
-## Exercises with list comprehensions
+## Exercices avec des compréhensions de liste
 
-1.  Using list comprehensions, create a list with the squares of the first 10 numbers.
+1.  En utilisant des compréhensions de liste, créez une liste avec les carrés des dix premiers nombres.
 
-2.  Using list comprehensions, create a list with the cubes of the first 20 numbers.
+2.  En utilisant des compréhensions de liste, créez une liste avec les cubes des 20 premiers nombres.
 
-3.  Create a list comprehension with all the even numbers from 0 to 20, and another one with all the odd numbers.
+3.  Créez une compréhension de liste avec tous les nombres pairs de 0 à 20, et une autre avec tous les nombres impairs.
 
-4.  Create a list with the squares of the even numbers from 0 to 20, and sum the list using the "sum" function. The result should be 1140. First create the list using list comprehensions, check the result, then apply the sum to the list comprehension.
+4.  Créez une liste avec les carrés des nombres pairs de 0 à 20, et faites la somme des éléments de la liste en utilisant la fonction "sum". Le résultat devrait être 1140. D'abord créez la liste en utilisant des compréhensions de listes, vérifiez le résultat, et ensuite appliquez la somme à la liste de compréhension.
 
-5.  Make a list comprehension that returns a list with the squares of all even numbers from 0 to 20, but ignore those numbers that are divisible by 3. In other words, each number should be divisible by 2 and not divisible by 3. Search for the "and" keyword in the Python documentation. The resulting list is \[4, 16, 64, 100, 196, 256\].
+5.  Créez une compréhension de liste qui retourne une liste contenant les carrés de tous les nombres pairs de 0 à 20, mais ignore les nombres qui sont divisibles par 3. En d'autres mots, chaque nombre devrait être divisible par 2 et ne pas être divisible par 3. Recherchez le mot-clé "and" dans la documentation Python. La liste résultante est \[4, 16, 64, 100, 196, 256\].

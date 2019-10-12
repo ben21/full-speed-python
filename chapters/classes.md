@@ -1,6 +1,6 @@
-# Classes
+# Les Classes
 
-In object oriented programming (OOP), a class is a structure that allows to group together a set of properties (called attributes) and functions (called methods) to manipulate those properties. Take the following class that defines a person with properties "name" and "age" and the "greet" method.
+En programmation orientée objet (POO), une classe est une structure qui permet de grouper ensemble un ensemble de propriétés (appelées attributs) et de fonctions (appelées méthodes) pour manipuler ces propriétés. Prenez la classe suivante qui définit une personne avec les propriétés "name" et "age" et la méthode "greet".
 
 ```Python
 class Person:
@@ -13,9 +13,9 @@ class Person:
           print("Hello, my name is %s!" % self.name)
 ```
 
-Most classes will need the constructor method ("\_\_init\_\_") to initialize the class’s attributes. In the previous case the constructor of the class receives the person’s name and age and stores that information in the class’s instance (referenced by the *self* keyword). Finally, "greet" method prints the name of the person as stored in a specific class instance (object).
+La plupart des classes ont besoin d'une méthode appelée constructeur ("\_\_init\_\_") pour intialiser les attributs de la classe. Dans le cas précédent le constructeur de la classe reçoit  le nom et l'âge de la personne et stocke cette information dans l'instance de la classe (référencée par le mot-clé *self*). Finalement, la méthode "greet" imprime le nom de la personne tel que stocké dans une instance de classe particulière (un objet).
 
-Class instances are used through the instantiation of objects. Here’s how we can instantiate two objects:
+Les instances de classe sont utilisées grâce à une instanciation d'objets. Voici comment nous instancions deux objets:
 
 ```Python
 >>> a = Person("Peter", 20)
@@ -26,29 +26,29 @@ Hello, my name is Peter!
 >>> b.greet()
 Hello, my name is Anna!
 
->>> print(a.age)  # We can also access the attributes of an object
+>>> print(a.age)  # Nous pouvons aussi accéder aux attributs d'un objet.
 20
 ```
 
-## Exercises with classes
+## Exercices avec des classes
 
-Use the Python documentation on classes at <https://docs.python.org/3/tutorial/classes.html> to solve the following exercises.
+Utilisez la documentation Python sur les classes à <https://docs.python.org/3/tutorial/classes.html> pour résoudre les exercices suivants.
 
-1.  Implement a class named "Rectangle" to store the coordinates of a rectangle given the top-left corner (x1, y1) and the bottom-right corner (x2, y2).
+1.  Implémentez une classe nommée "Rectangle" pour stocker les coordonnées d'un rectangle d'après le coin supérieur gauche (x1, y1) et le coin inférieur droit (x2, y2).
 
-2.  Implement the class constructor with the parameters (x1, y1, x2, y2) and store them in the class instance using the "self" keyword.
+2.  Implémentez le constructeur de classe avec les paramètres (x1, y1, x2, y2) et stockez-les dans l'instance de classe en utilisant le mot-clé "self".
 
-3.  Implement the "width()" and "height()" methods which return, respectively, the width and height of a rectangle. Create two objects, instances of "Rectangle" to test the calculations.
+3.  Implémentez les méthodes "width()" et "height()" qui retournent, respectivement, la largeur et la hauteur d'un rectangle. Créez deux objets, instances de "Rectangle", pour tester les calculs.
 
-4.  Implement the method "area" to return the area of the rectangle (width\*height).
+4.  Implémentez la méthode "area" pour retourner l'aire du rectangle (width\*height).
 
-5.  Implement the method "circumference" to return the perimeter of the rectangle (2\*width + 2\*height).
+5.  Implémentez la méthode "circumference" qui retourne le périmètre du rectangle (2\*width + 2\*height).
 
-6.  Do a print of one of the objects created to test the class. Implement the "\_\_str\_\_" method such that when you print one of the objects it print the coordinates as (x1, y1)(x2, y2).
+6.  Faites un print d'un des objets créés pour tester la classe. Implémentez la méthode "\_\_str\_\_" de manière que lorsque vous imprimez l'un des objets il imprime les coordonnées comme (x1, y1)(x2, y2).
 
-## Class inheritance
+## L'Héritage de classe
 
-In object oriented programming, inheritance is one of the forms in which a subclass can inherit the attributes and methods of another class, allowing it to rewrite some of the super class’s functionalities. For instance, from the "Person" class above we could create a subclass to keep people with 10 years of age:
+En programmation orientée objet, l'héritage est une des formes par lesquelles une sous-classe peut hériter des attributs et des méthodes d'une autre classe, lui permettant de réécrire certaines des fonctionnalités de la superclasse. Par exemple, à partir de la classe "Person" vue plus haut nous pouvons créer une sous-classe qui ne conserve que les personnes âgées de 10 ans:
 
 ```Python
 class TenYearOldPerson(Person):
@@ -60,14 +60,16 @@ class TenYearOldPerson(Person):
           print("I don't talk to strangers!!")
 ```
 
-The indication that the "TenYearOldPerson" class is a subclass of "Person" is given on the first line. Then, we rewrote the constructor of the subclass to only receive the name of the person, but we will eventually call the super class’s constructor with the name of the 10-year-old and the age hardcoded as 10. Finally we reimplemented the "greet" method.
+L'indication que la classe "TenYearOldPerson" est une sous-classe de "Person" est donnée à la première ligne. Ensuite, nous avons réécrit le constructeur de la sous-classe pour ne recevoir que le nom de la personne, mais nous appelons finalement le constructeur de la superclasse avec le nom de l'enfant de 10 ans et l'âge codé en dur de 10. Enfin, nous avons réimplémenté la méthode "greet".
 
-## Exercises with inheritance
+## Exercices avec l'héritage
 
-Use the "Rectangle" class as implemented above for the following exercises:
+Utilisez la classe "Rectangle" telle qu'elle est implémentée plus haut pour effectuer les exercices suivants:
 
-1.  Create a "Square" class as subclass of "Rectangle".
+1.  Créez une class "Square" comme sous-classe de "Rectangle".
 
 2.  Implement the "Square" constructor. The constructor should have only the x1, y1 coordinates and the size of the square. Notice which arguments you’ll have to use when you invoke the "Rectangle" constructor when you use "super".
 
-3.  Instantiate two objects of "Square", invoke the area method and print the objects. Make sure that all calculations are returning correct numbers and that the coordinates of the squares are consistent with the size of the square used as argument.
+2.  Implémentez le constructeur de "Square". Le constructeur ne doit contenir que les coordonnées x1, y1 et la taille du carré. Faites attention aux arguments que vous utilisez lorsque vous invoquez le constructeur de "Rectangle" lorsque vous utilisez "super".
+
+3.  Instantiez deux objets "Square", invoquez la méthode "area" et imprimez les objets. Assurez-vous que tous les calculs retournent des nombres corrects et que les coordonnées des carrés sont cohérents avec la taille du carré utilisée comme argument.
